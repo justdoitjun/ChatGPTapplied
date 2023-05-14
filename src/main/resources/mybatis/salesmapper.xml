@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kbstar.mapper.SalesMapper">
+
+
+    <select id="selectall" resultType="sales">
+        SELECT * FROM sales
+    </select>
+    <insert id="insert" parameterType="sales">
+        INSERT INTO sales VALUES (TO_DATE(#{rdate},'YYYY-MM-DD'), #{price}, #{gender})
+    </insert>
+    <select id="groupsales" resultType="sales">
+        select gender, extract(month from rdate) as rdate, sum(price) as price
+        from sales
+        group by gender, extract(month from rdate)
+        having gender= 'F'
+        order by gender, rdate
+    </select>
+
+</mapper>
