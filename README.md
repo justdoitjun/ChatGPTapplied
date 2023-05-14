@@ -8,6 +8,9 @@
 #2. 수출입은행 API 적용 : GET 방식 --> 자본금을 통한 모의투자 예상 탭 만들 예정
 <hr>
 #3. 금융감독원 DART 전자공시 API 적용 : GET 방시 --> 분석적 절차 (감사 기술) 적용할 예정 - 비율 / 추이분석 : 차트 디스플레이
+<hr>
+$4. Alpha Vantage // 자본금 설정을 통해서 Currency 투자를 했을 때 수익률 예상 정보를 뿌려주는 예비 투자 기능. --> Portfolio 구성가능
+DB를 만들어서 Protfolio에 현재 내 자산 규모에 대해서 말해주고, 자산규모가 일정 이하로 떨어지면 경고창까지 뿌려주는 기능. 
 
 <img width="1440" alt="image" src="https://github.com/justdoitjun/ChatGPTapplied/assets/119689162/1fd1a9c0-e6f9-411c-9f9d-c1e67c5008c1">
 
