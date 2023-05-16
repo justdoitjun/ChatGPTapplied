@@ -3,6 +3,8 @@ package com.kbstar.controller;
 import com.kbstar.dto.Cust;
 import com.kbstar.exchange.BSExchange;
 import com.kbstar.exchange.FXExchange;
+import com.kbstar.exchange.StockExchange;
+import com.kbstar.exchange.StockSearch;
 import com.kbstar.service.CustService;
 import com.kbstar.service.SalesService;
 import lombok.extern.slf4j.Slf4j;
@@ -74,6 +76,7 @@ public class SalesController {
         return "index";
     }
 
+
     @GetMapping("/bsexchange/generate")
     @ResponseBody
     public String generateCode(@RequestParam("corp_code") String corp_code,
@@ -87,6 +90,42 @@ public class SalesController {
         try {
             BSExchange bsExchange = new BSExchange();
             String code = bsExchange.generateCode(corp_code, bsns_year, reprt_code);
+            return code;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Error occurred";
+        }
+    }
+
+    @RequestMapping("/investment")
+    public String stockexchange(Model model) throws Exception{
+        model.addAttribute("entireIndex", dir+"investment/" + "overlook");
+        return "index";
+    }
+    @GetMapping("/investment/search")
+    @ResponseBody
+    public String searchCompany(@RequestParam("keywords") String keywords) throws Exception{
+        log.info("=========");
+        log.info(keywords);
+        log.info("=========");
+        try {
+            StockSearch stockSearch = new StockSearch();
+            String code = stockSearch.generateCode(keywords);
+            return code;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Error occurred";
+        }
+    }
+    @GetMapping("/investment/generate")
+    @ResponseBody
+    public String generateStock(@RequestParam("symbol") String symbol) throws Exception{
+        log.info("=========");
+        log.info(symbol);
+        log.info("=========");
+        try {
+            StockExchange stockExchange = new StockExchange();
+            String code = stockExchange.generateCode(symbol);
             return code;
         } catch (Exception e) {
             e.printStackTrace();

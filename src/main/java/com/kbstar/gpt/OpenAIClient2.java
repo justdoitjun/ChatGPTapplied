@@ -23,7 +23,7 @@ import java.net.http.HttpResponse;
 @Slf4j
 public class OpenAIClient2 {
     //curl 설치 필수!!
-    private static final String API_KEY = "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";
+    private static final String API_KEY = "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";
     private static final String BASE_URL = "https://api.openai.com/v1/chat/completions";
     private final HttpClient client; //client 객체를 먼저 생성
 
