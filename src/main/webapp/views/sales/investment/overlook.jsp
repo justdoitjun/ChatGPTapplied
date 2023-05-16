@@ -260,12 +260,12 @@
             Highcharts.chart('container', {
 
                 title: {
-                    text: 'STOCK TREND : ' + $('#request').val().toUpperCase(),
+                    text: 'STOCK TREND : ' + obj["Meta Data"]["2. Symbol"].toUpperCase(),
                     align: 'left'
                 },
 
                 subtitle: {
-                    text: '통화기준 : USD'+'powered by Alpha Vantage in NYSE',
+                    text: '통화기준 : $USD'+' __ powered by Alpha Vantage in NYSE',
                     align: 'left'
                 },
 
@@ -278,7 +278,7 @@
 
                 yAxis: {
                     title: {
-                        text: null
+                        text: 'Stock Price - USD'
                     }
                 },
 
@@ -296,7 +296,7 @@
                 },
 
                 series: [{
-                    name: $('#request').val().toUpperCase(),
+                    name: obj["Meta Data"]["2. Symbol"].toUpperCase(),
                     data: averages,//변수 data
                     zIndex: 1,
                     marker: {
