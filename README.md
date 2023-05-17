@@ -22,6 +22,8 @@ DB를 만들어서 Protfolio에 현재 내 자산 규모에 대해서 말해주�
 <img width="1471" alt="image" src="https://github.com/justdoitjun/ChatGPTapplied/assets/119689162/e9a7dad6-42fb-41e5-ab35-027e0635516e">
 <img width="1440" alt="image" src="https://github.com/justdoitjun/ChatGPTapplied/assets/119689162/220ba259-203e-40eb-b727-786cab92340e">
 <img width="1440" alt="image" src="https://github.com/justdoitjun/ChatGPTapplied/assets/119689162/03d81ff8-2c0b-4134-ae7b-ef19e68d11fe">
+<img width="1440" alt="image" src="https://github.com/justdoitjun/ChatGPTapplied/assets/119689162/71ad84af-e64c-4ffb-b7f7-fe7a3ca8ae94">
+
 
 
 
